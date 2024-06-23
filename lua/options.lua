@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt.tabstop = 4
     vim.opt.shiftwidth = 4
     vim.opt.expandtab = true
-    vim.diagnostic.enable(false)
+    -- vim.diagnostic.enable(false)
   end,
 })
 
@@ -19,15 +19,15 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 
 -- functions
-local lsp_msg_enabled = false
-
-vim.api.nvim_create_user_command("LspMsg", function()
-  lsp_msg_enabled = not lsp_msg_enabled
-  if lsp_msg_enabled then
-    vim.diagnostic.enable(true)
-    print "LSP diagnostics enabled"
-  else
-    vim.diagnostic.enable(false)
-    print "LSP diagnostics disabled"
-  end
-end, {})
+-- local lsp_msg_enabled = false
+--
+-- vim.api.nvim_create_user_command("LspMsg", function()
+--   lsp_msg_enabled = not lsp_msg_enabled
+--   if lsp_msg_enabled then
+--     vim.diagnostic.enable(true)
+--     print "LSP diagnostics enabled"
+--   else
+--     vim.diagnostic.enable(false)
+--     print "LSP diagnostics disabled"
+--   end
+-- end, {})
